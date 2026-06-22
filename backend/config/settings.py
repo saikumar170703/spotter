@@ -119,7 +119,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     o.strip() for o in os.environ.get(
         'CORS_ALLOWED_ORIGINS',
-        'http://localhost:5173,http://127.0.0.1:5173'
+        'https://spotterfrontend.vercel.app/'
     ).split(',')
 ]
 CORS_ALLOW_ALL_ORIGINS = DEBUG  # Allow all in dev
