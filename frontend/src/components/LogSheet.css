@@ -1,0 +1,45 @@
+.log-sheet-wrapper {
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.log-sheet-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-input);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.log-sheet-day-label {
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  color: var(--accent-blue-light);
+}
+
+.log-sheet-date {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+.btn-sm {
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--fs-xs);
+}
+
+.log-sheet-canvas-container {
+  overflow-x: auto;
+  padding: var(--space-lg);
+  background: white;
+}
+
+.log-sheet-canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
