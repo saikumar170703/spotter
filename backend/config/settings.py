@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-dev-key-change-in-pro
 DEBUG = os.environ.get('DEBUG', 'False').lower() in ('true', '1', 'yes')
 
 ALLOWED_HOSTS = [
-    h.strip() for h in os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+    h.strip() for h in os.environ.get('ALLOWED_HOSTS', 'https://spotterfrontend.vercel.app/').split(',')
 ]
 # Allow Render's host
 ALLOWED_HOSTS.append('.onrender.com')
@@ -116,13 +116,14 @@ REST_FRAMEWORK = {
 }
 
 # CORS
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     o.strip() for o in os.environ.get(
         'CORS_ALLOWED_ORIGINS',
         'https://spotterfrontend.vercel.app/'
     ).split(',')
 ]
-CORS_ALLOW_ALL_ORIGINS = DEBUG  # Allow all in dev
+# CORS_ALLOW_ALL_ORIGINS = DEBUG  # Allow all in dev
 
 # OpenRouteService API Key
 ORS_API_KEY = os.environ.get('ORS_API_KEY', '')
