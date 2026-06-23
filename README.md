@@ -28,7 +28,7 @@ A full-stack Django + React application that plans HOS-compliant truck trips and
 - **Backend**: Django 4.2+, Django REST Framework
 - **Frontend**: React (Vite), Leaflet, HTML5 Canvas
 - **Map API**: OpenRouteService (free tier)
-- **Deployment**: Vercel (frontend) + Render (backend)
+- **Deployment**: Vercel
 
 ## Getting Started
 
@@ -42,8 +42,7 @@ A full-stack Django + React application that plans HOS-compliant truck trips and
 ```bash
 cd backend
 pip install -r requirements.txt
-# Add your ORS API key to .env
-echo "ORS_API_KEY=your_key_here" >> .env
+
 python manage.py migrate
 python manage.py runserver 8000
 ```
@@ -56,31 +55,8 @@ npm install
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`.
 
-### Environment Variables
 
-#### Backend (.env)
-```
-DEBUG=True
-SECRET_KEY=your-secret-key
-ORS_API_KEY=your-openrouteservice-api-key
-ALLOWED_HOSTS=localhost,127.0.0.1
-CORS_ALLOWED_ORIGINS=http://localhost:5173
-```
 
-## Deployment
 
-### Frontend (Vercel)
-1. Push `frontend/` to GitHub
-2. Import into Vercel
-3. Set `VITE_API_URL` environment variable to your backend URL
 
-### Backend (Render)
-1. Push `backend/` to GitHub
-2. Create a Web Service on Render
-3. Set environment variables: `SECRET_KEY`, `ORS_API_KEY`, `DATABASE_URL`, `CORS_ALLOWED_ORIGINS`
-
-## License
-
-MIT
